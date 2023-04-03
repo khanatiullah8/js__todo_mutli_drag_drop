@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+span { display: inline-block; }
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1366px;
+  width: 95%; 
+  margin: 0 auto;
+}
+
+/*=================================
+  main styling starts here
+=================================*/
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  background-color: #c54c4c;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  padding: 10px 0;
+  border-radius: 3px;
+  display: flex;
+  background-color: #dd5e5e;
+  box-shadow: inset 3px 3px 5px #f07c7c,
+              inset -3px -3px 5px #c54c4c,
+              2px 2px 5px rgba(0, 0, 0, 0.2);
+  flex-basis: calc(100% / 3);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.child {
+  padding: 10px;
+  max-height: 300px;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 7px;
+  scrollbar-width: thin;
+}
+
+.child::-webkit-scrollbar { width: 8px; }
+
+.child::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #222;
+}
+
+.todo-list {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #f07c7c;
+  color: #222;
+  font-weight: 600;
+  outline: none;
+  word-break: break-word;
+}
+
+.todo-list.hide { display: none; }
+.todo-list.cursor-pointer { cursor: pointer; }
+
+.add_btn {
+  width: fit-content;
+  padding: 5px 20px;
+  border-radius: 3px;
+  margin: 0 auto;
+  box-shadow: inset 5px 5px 5px #f07c7c,
+              inset -5px -5px 5px #c54c4c,
+              2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all .3s;
+
+}
+
+.add_btn::before {
+  content: '+';
+  margin-right: 5px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.add_btn:hover {
+  box-shadow: inset 2px 2px 2px #f07c7c,
+              inset -2px -2px 2px #c54c4c,
+              2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/* ============================== */
+
+ /*=================================
+  media query starts
+=================================*/ 
+
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
